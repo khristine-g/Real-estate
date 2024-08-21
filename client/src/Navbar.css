@@ -1,0 +1,48 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed; /* Make the navbar fixed */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    height: 80px;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+   
+  }
+  
+  .navbar-scrolled {
+    background-color: white; /* Change background color when scrolled */
+    color: #333; /* Change text color to ensure visibility */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    margin-right: 800px;
+  }
+  
+  .navbar-links li {
+    margin: 0;
+  }
+  
+  .navbar-links a {
+    color: inherit; /* Inherit color from navbar */
+    text-decoration: none;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  

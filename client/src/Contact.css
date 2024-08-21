@@ -1,0 +1,28 @@
+.contact-container{
+
+    width: 100%;
+    margin-bottom: 400px;
+   
+}
+.contact-header{
+
+    margin-top: 200px;
+}
+.contact-info{
+
+    background-color: white;
+    border: 1px solid white;
+    display: flex;
+    gap: 200px;
+    margin-left: 200px;
+    position: relative;
+    margin-top: 600px;
+}
+.contact-image{
+
+  width: 100vw;  
+  height: 70vh;
+  object-fit: cover;
+  margin-top: 100px;
+  position: absolute;
+}

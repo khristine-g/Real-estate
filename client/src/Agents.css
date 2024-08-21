@@ -1,0 +1,29 @@
+.agent-container{
+
+   margin-top: 200px; 
+   
+}
+.agent-image{
+
+   width: 99vw;  
+   height: 70vh;
+   object-fit: cover;
+   margin-top: 100px;
+   position: absolute;
+
+
+}
+
+.agent-finder{
+
+   background-color: white;
+   border: 1px solid white;
+   display: flex;
+   gap: 200px;
+   margin-left: 200px;
+   position: relative;
+   margin-top: 800px;
+   margin-bottom: 100px;
+
+
+}
