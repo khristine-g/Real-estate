@@ -1,0 +1,116 @@
+.agent-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .agent-details-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .agent-details-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .agent-detail-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .agent-info {
+    text-align: left;
+    padding: 20px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .agent-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .agent-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .agent-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .agent-contact a {
+    color: #0077cc;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .agent-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .agent-listings {
+    margin-top: 30px;
+  }
+  
+  .agent-listings h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .agent-listings ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .agent-listings li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .agent-listings li a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .agent-listings li a:hover {
+    text-decoration: underline;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .agent-details-container {
+      flex-direction: row;
+      padding: 30px;
+    }
+  
+    .agent-image {
+      margin-right: 30px;
+    }
+  
+    .agent-info {
+      flex: 1;
+      padding: 0 20px;
+    }
+  }
+  

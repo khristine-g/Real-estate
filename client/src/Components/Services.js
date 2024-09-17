@@ -23,7 +23,7 @@ const serviceDetails = [
 const Services = () => {
   return (
     <div className="services-container">
-      <img src="https://media.designcafe.com/wp-content/uploads/2024/03/20225537/luxury-bedroom-interior-design.jpg" alt="Services" className="services-image" />
+      <img src=" https://www.mcdonaldjoneshomes.com.au/sites/default/files/inline-images/Miami-Encore-modern-interior-design-style-Lounge-Dining.jpg" alt="Services" className="services-image" />
       <div className="services-cards">
         {serviceDetails.map((service, index) => (
           <div key={index} className="service-card">

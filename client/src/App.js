@@ -7,6 +7,7 @@ import Properties from './Components/Properties';
 import PropertyDetail from './Components/PropertyDetail';
 import Contact from './Components/Contact';
 import Agents from './Components/Agents';
+import AgentDetail from './Components/AgentDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/agents" element={<Agents />} />
+          <Route path="/agents/:id" element={<AgentDetail />} />
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/property/:id" element={<PropertyDetail />} />

@@ -52,7 +52,7 @@ const PropertyDetail = () => {
       <p>{property.description}</p>
     
       
-      <p>Agent: {property.agent}</p>
+     
       <p>Category: {property.category}</p>
     </div>
     </div>
