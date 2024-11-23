@@ -22,7 +22,13 @@ const serviceDetails = [
 
 const Services = () => {
   return (
+    <div className="animate-on-scroll">
     <div className="services-container">
+    <h2 className="services-page-title">Our Services</h2>
+        <p className="services-intro-text">
+          Quis nulla blandit vulputate morbi adipiscing sem vestibulum. Nulla turpis integer dui sed posuere sem.
+          Id molestie mi arcu gravida lorem potenti.
+        </p>
       <img src=" https://www.mcdonaldjoneshomes.com.au/sites/default/files/inline-images/Miami-Encore-modern-interior-design-style-Lounge-Dining.jpg" alt="Services" className="services-image" />
       <div className="services-cards">
         {serviceDetails.map((service, index) => (
@@ -34,6 +40,7 @@ const Services = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

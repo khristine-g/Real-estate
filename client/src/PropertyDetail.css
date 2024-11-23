@@ -1,13 +1,14 @@
 
 
 .property-detail {
-    padding: 20px;
+
     margin-top: 150px;
     display: flex;
     gap: 60px;
     margin-left: 200px;
     margin-bottom: 50px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
    
   }
   
@@ -62,6 +63,8 @@
   .property-detail p {
     margin: 10px 0;
     text-align: center;
+    
+  
 
   }
   

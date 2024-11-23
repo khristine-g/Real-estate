@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../Agents.css";
+import { motion } from 'framer-motion';
 
 const Agents = () => {
   const [agents, setAgents] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch agents from the API
     fetch('http://localhost:3000/agents')
       .then(response => response.json())
       .then(data => setAgents(data))
@@ -20,44 +20,58 @@ const Agents = () => {
 
   return (
     <div className="agent-container">
-      <h1 className='agent-header'>Our Agents</h1>
-      <p className='agent-paragraph'> Pairing the industry's top technology with unsurpassed local expertise.</p>
-      <div  className='agent-image-container'>
-      <img className="agent-image" src="https://www.nerdwallet.com/assets/blog/wp-content/uploads/2022/06/GettyImages-1352105665-1440x864.jpg" alt="agents speaking" />
-     
-      <h1 className='agent-finder-header'>Find an Agent</h1>
-      </div>
-    
-      <div className="agent-finder">
-  
-        <label>Location
-          <input type="text" className="search-bar" placeholder="Neighbourhood/City" />
-        </label>
-     
-        <label>Name 
-          <input type="text" className="search-bar" placeholder="Agent name" />
-        </label> 
-      
-        <label>Service needed
-          <select className="search-bar">
-            <option value="">Select service</option>
-            <option value="selling">Selling a property</option>
-            <option value="buying">Buying a property</option>
-            <option value="renting">Renting a property</option>
-          </select>
-        </label>
-   
-   
-      </div>
+      <motion.h1
+        className="agent-header"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Meet Our Professional Agents
+      </motion.h1>
+      <motion.p
+        className="agent-paragraph"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        We pair the industry's top technology with unmatched local expertise to bring you the best real estate experience.
+      </motion.p>
+
       
 
+      <motion.h2
+        className="team-header"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Meet The Awesome Team
+      </motion.h2>
+      <motion.p
+        className="team-paragraph"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        Realar makes it easy to connect with the best agents in the business. Whether you're buying, selling, or renting, we've got you covered.
+      </motion.p>
+
       <div className="agents-list">
-        {agents.map(agent => (
-          <div key={agent.id} className="agent-card" onClick={() => viewAgentDetails(agent.id)}>
+        {agents.map((agent) => (
+          <motion.div
+            key={agent.id}
+            className="agent-card"
+            onClick={() => viewAgentDetails(agent.id)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: agent.id * 0.1 }}
+          >
             <img src={agent.image} alt={agent.name} className="agent-photo" />
-            <h3>{agent.name}</h3>
-            <p>{agent.email}</p>
-          </div>
+            <h3 className='agent-content'>{agent.name}</h3>
+            <p className='agent-content'>{agent.email}</p>
+          </motion.div>
         ))}
       </div>
     </div>

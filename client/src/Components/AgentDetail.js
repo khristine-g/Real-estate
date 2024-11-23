@@ -19,6 +19,7 @@ const AgentDetail = () => {
 
   return (
     <div className="agent-detail">
+    
       <img src={agent.image} alt={agent.name} className="agent-photo-large" />
       <h1>{agent.name}</h1>
       <p><strong>Email:</strong> {agent.email}</p>

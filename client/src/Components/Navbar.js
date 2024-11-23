@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import '../Navbar.css';
+import { FaCity } from "react-icons/fa";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,8 +20,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-      <div className="navbar-brand">Urban Realty</div>
+    <nav className={`real-navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+    
+<div className="navbar-brand">
+  <FaCity className="logo-icon"  /> Urban Realty</div>
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
