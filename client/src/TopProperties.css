@@ -1,0 +1,195 @@
+.top-property {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 100px;
+  }
+  
+  .top-property-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+   
+  }
+  
+  .top-property-button {
+    border-radius: 68px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .top-property-button:hover {
+    background-color: teal;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .top-property-button.active {
+    /* background-color: #3498db; */
+    background-color: teal;
+    color: white;
+  }
+  .view-all-properties-button{
+
+   margin-left: 780px;
+   border-radius: 68px;
+   padding: 5px;
+   width: 250px;
+   height: auto;
+   font-weight: bold;
+   color: white;
+   background-color: teal;
+  }
+  .view-all-properties-button:hover{
+
+    background-color: rgb(1, 70, 70);
+    transform: translateY(-2px);
+  }
+  
+  /* Recommended Properties */
+  .top-property-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  .top-property{
+    text-align: center;
+    margin-bottom: 10px;
+    color: teal;
+    font-size: 20px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+  }
+  
+  .top-properties-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Property Card */
+  .top-property-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.33% - 15px); /* 3 cards per row */
+  }
+  
+  .topproperty-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .top-property-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .top-property-info {
+    padding: 15px;
+  }
+  
+  .top-property-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .top-property-meta {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+  
+  .top-property-location {
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin-bottom: 15px;
+  }
+  
+  /* Divider */
+  .top-property-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 15px 0;
+  }
+  
+  /* Agent Info */
+  .top-agent-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .top-agent-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+    margin-right: 10px;
+  }
+  
+  .top-agent-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-agent-name {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  .top-property-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: teal;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .top-property-card {
+      width: calc(50% - 10px); /* 2 cards per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .top-property-card {
+      width: 100%; /* 1 card per row */
+    }
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  }
+  
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import '../Home.css';
 import Properties from './Properties';
+import TopProperties from "./TopProperties";
 import Services from "./Services";
-// import Agents from "./Agents";
+import Agents from "./Agents";
+import Recommended from "./Recommended";
 import Neighbourhoods from "./Neighbourhoods";
 import Schedule from "./Schedule";
+import Footer from "./Footer";
 
 // import InteriorImage from '../images/interior1.jpg';
 
@@ -59,11 +62,16 @@ const Home = () => {
       
     
       <Properties />
+      <Recommended />
       <Neighbourhoods />
-      <Schedule />
+      <TopProperties />
+     
+
       <Services />
      
-      {/* <Agents /> */}
+      <Agents />
+      <Schedule />
+      <Footer />
     </>
   );
 };

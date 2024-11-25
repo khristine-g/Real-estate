@@ -1,46 +1,57 @@
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import '../Services.css';
-
-const serviceDetails = [
-  {
-    title: 'Find your future home',
-    description: 'We help you find a new home by offering a smart real estate experience',
-  },
-  {
-    title: 'Experienced agents',
-    description: 'Find an agent who knows your market best',
-  },
-  {
-    title: 'Buy or rent homes',
-    description: 'Millions of houses and apartments in your favourite cities',
-  },
-  {
-    title: 'List your own property',
-    description: 'Sign up now and sell or rent your own properties',
-  },
-];
+import propertyImage7 from '../images/property7.jpg';
+import propertyImage8 from '../images/property8.jpg';
+import propertyImage9 from '../images/property9.jpg';
 
 const Services = () => {
+  const services = [
+    {
+      id: 1,
+      title: 'Buy A New Home',
+      description: 'Discover your dream home effortlessly. Explore diverse properties and expert guidance for a seamless buying experience.',
+      image: propertyImage7,
+    },
+    {
+      id: 2,
+      title: 'Sell a Home',
+      description: 'Sell confidently with expert guidance and effective strategies, showcasing your property\'s best features for a successful sale.',
+      image: propertyImage8, 
+    },
+    {
+      id: 3,
+      title: 'Rent a Home',
+      description: 'Discover your perfect rental effortlessly. Explore a diverse variety of listings tailored precisely to suit your unique lifestyle needs.',
+      image: propertyImage9, 
+    },
+  ];
+
   return (
     <div className="animate-on-scroll">
-    <div className="services-container">
-    <h2 className="services-page-title">Our Services</h2>
-        <p className="services-intro-text">
-          Quis nulla blandit vulputate morbi adipiscing sem vestibulum. Nulla turpis integer dui sed posuere sem.
-          Id molestie mi arcu gravida lorem potenti.
-        </p>
-      <img src=" https://www.mcdonaldjoneshomes.com.au/sites/default/files/inline-images/Miami-Encore-modern-interior-design-style-Lounge-Dining.jpg" alt="Services" className="services-image" />
-      <div className="services-cards">
-        {serviceDetails.map((service, index) => (
-          <div key={index} className="service-card">
-            <div className="service-card-content">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+    <section className="services">
+      <div className="container">
+        <h2 className="services-title">Our Services</h2>
+        <p className="services-subtitle">What We Do?</p>
+        <div className="services-grid">
+          {services.map((service) => (
+            <div key={service.id} className="service-card">
+              <div
+                className="service-image"
+                style={{ backgroundImage: `url(${service.image})` }}
+              ></div>
+              <div className="service-content">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <button className="learn-more-btn">
+                  Learn More <FaArrowRight className="arrow-icon" />
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
     </div>
   );
 };

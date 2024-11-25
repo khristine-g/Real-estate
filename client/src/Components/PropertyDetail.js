@@ -7,13 +7,9 @@ const PropertyDetail = () => {
   const [property, setProperty] = useState(null);
 
   useEffect(() => {
-    console.log(`Fetching property with id: ${id}`); // Check the value of id
     fetch(`/listings/${id}`)
       .then(response => response.json())
-      .then(data => {
-        console.log('Property data:', data);
-        setProperty(data);
-      })
+      .then(data => setProperty(data))
       .catch(error => console.error('Error fetching property:', error));
   }, [id]);
 
@@ -21,40 +17,46 @@ const PropertyDetail = () => {
     return <div>Loading...</div>;
   }
 
-  console.log('Images:', property.images); // Log images
-
   return (
-    <div>
     <div className="property-detail">
-      <h2>{property.title}</h2>
-      <h2>{property.location}</h2>
-      <h2>  ${property.price}</h2>
-      <p >{property.bedrooms} Bedrooms</p>
-      <p>{property.bathrooms} Bathrooms</p>
-      <p>{property.size} Sqft</p>
+      <div className="property-header">
+        <div className="property-title-price">
+          <h1 style={{color:"black"}}>{property.title} </h1>
+          <h2 style={{color:"black"}}>${property.price}</h2>
+        </div>
+        <hr className="header-divider" />
+        <div className="property-meta">
+          <p>
+            <i className="fas fa-bed"></i> {property.bedrooms} Bedrooms
+          </p>
+          <p>
+            <i className="fas fa-bath"></i> {property.bathrooms} Bathrooms
+          </p>
+          <p>
+            <i className="fas fa-expand"></i> {property.size} Sqft
+          </p>
+          <p>
+            <i className="fas fa-map-marker-alt"></i> {property.location}
+          </p>
+        </div>
       </div>
-      
-      
+
       <div className="property-images">
-      <img  className='main-property-image'src={property.image} alt={property.title} />
-        {property.images && property.images.length > 0 ? (
+        <img className="main-property-image" src={property.image} alt={property.title} />
+        {property.images?.length > 0 ? (
           property.images.map((img, index) => (
             <img key={index} src={img.url} alt={`${property.title} - ${index}`} />
           ))
         ) : (
           <p>No images available</p>
         )}
-      
-      
       </div>
-      <div className='property-overview'>
-      <h2>Overview</h2>
-      <p>{property.description}</p>
-    
-      
-     
-      <p>Category: {property.category}</p>
-    </div>
+
+      <div className="property-overview">
+        <h2>Overview</h2>
+        <p>{property.description}</p>
+        <p>Category: {property.category}</p>
+      </div>
     </div>
   );
 };

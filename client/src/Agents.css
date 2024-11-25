@@ -1,129 +1,144 @@
-.agent-container {
-  margin-top: 50px;
+/* Agents component styling */
+.agents-container {
+  margin: 50px auto;
   padding: 20px;
+  max-width: 1200px;
   font-family: 'Roboto', sans-serif;
-  background-color: #f7f7f9;
-  color: #2c3e50;
+  text-align: center;
+  margin-top: 100px;
 }
 
-.agent-header {
-  text-align: center;
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #2c3e50;
-  letter-spacing: 2px;
-}
-
-.agent-paragraph {
-  text-align: center;
-  font-size: 1.3rem;
-  margin-bottom: 40px;
-  color: #7f8c8d;
-  line-height: 1.6;
-}
-
-.team-header {
-  text-align: center;
+.agents-title {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-top: 50px;
-  color: #34495e;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+.agents-sub-title{
+
+ font-size: 20px; 
+ color: teal;
+ 
 }
 
-.team-paragraph {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #7f8c8d;
-  line-height: 1.6;
-}
-
-.agents-list {
+.agents-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Show 3 columns */
   gap: 30px;
-  margin-top: 20px;
+  justify-items: center;
 }
 
 .agent-card {
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
-  text-align: center;
-  cursor: pointer;
+  margin-bottom: 50px;
 }
 
-.agent-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+.agent-card:hover .agent-image {
+  opacity: 0.4;
 }
 
-.agent-photo {
+.agent-card:hover .social-icons {
+  visibility: visible;
+  opacity: 1;
+}
+
+.agent-image-container {
+  position: relative;
   width: 100%;
-  height: 240px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.agent-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
-}
-.agent-content{
-    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */;
+  transition: opacity 0.3s ease;
 }
 
-.agent-card:hover .agent-photo {
-  transform: scale(1.05);
+.social-icons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
 }
 
-.agent-card h3 {
-  font-size: 1.8rem;
-  color: #2c3e50;
-  margin: 15px 0 5px 0;
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+.agent-info {
+  padding: 10px;
+  background-color: rgb(3, 100, 100);
+ 
+}
+
+.agent-name {
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #2c3e50;
 }
 
-.agent-card p {
+.agent-title {
   font-size: 1.1rem;
   color: #7f8c8d;
   margin-bottom: 15px;
 }
 
-.agent-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 1;
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 
-.agent-card:hover::after {
-  opacity: 1;
+.contact-icon {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
 }
 
-.agent-card h3, .agent-card p {
-  position: relative;
-  z-index: 2;
+.contact-icon:hover {
+  color: #3498db;
 }
 
-.agent-card h3 {
-  margin-top: -60px;
-  color: #ffffff;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .agents-grid {
+    grid-template-columns: repeat(1, 1fr); /* Show 1 column on smaller screens */
+  }
 
-.agent-card p {
-  color: #dcdcdc;
-}
-
-@media screen and (max-width: 768px) {
-  .agents-list {
-    grid-template-columns: 1fr;
+  .agent-card {
+    max-width: 90%;
+    margin-bottom: 20px;
   }
 }
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
  

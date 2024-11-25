@@ -9,7 +9,7 @@ import Contact from './Components/Contact';
 import useScrollAnimation from "./Components/useScrollAnimation.js";
 
 // import Agents from './Components/Agents';
-import AgentDetail from './Components/AgentDetail';
+
 
 function App() {
   useScrollAnimation(); 
@@ -22,7 +22,7 @@ function App() {
           {/* <Route path="/agents" element={<Agents />} /> */}
           
 
-          <Route path="/agents/:id" element={<AgentDetail />} />
+         
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/property/:id" element={<PropertyDetail />} />
