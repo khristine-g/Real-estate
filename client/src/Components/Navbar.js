@@ -23,7 +23,9 @@ const Navbar = () => {
     <nav className={`real-navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
     
 <div className="navbar-brand">
-  <FaCity className="logo-icon"  /> Urban Realty</div>
+  <FaCity className="logo-icon"  /> </div>
+  <h2 className="company-name">Urban Realty</h2>
+  
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>

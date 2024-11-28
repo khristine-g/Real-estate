@@ -56,12 +56,18 @@
     transform: translateY(-2px);
   }
   
-  /* Recommended Properties */
+  /* Top Properties */
   .top-property-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  .top-property-sub-title {
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #2c3e50;
   }
   .top-property{
@@ -107,12 +113,7 @@
     padding: 15px;
   }
   
-  .top-property-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2c3e50;
-  }
+  
   
   .top-property-meta {
     font-size: 0.9rem;

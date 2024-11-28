@@ -80,9 +80,9 @@ const TopProperties = () => {
   return (
     <div className="animate-on-scroll">
     <div className="top-property">
-         <h4 className="top-property-sub-title">Recommended Properties</h4>
+         <h4 className="top-property-sub-title">Top Properties</h4>
 
-         <h2 className="top-property-title">Recommended Properties</h2>
+         <h2 className="top-property-title">Best Property Value</h2>
       <div className="top-property-buttons">
         <button className="property-button active">Apartment</button>
         <button className="property-button">Villa</button>
@@ -96,7 +96,7 @@ const TopProperties = () => {
           <div key={index} className="top-property-card">
             <img src={property.image} alt={property.title} className="top-property-image" />
             <div className="top-property-info">
-              <h3 className="top-property-title">{property.title}</h3>
+              <h3 className="property-title">{property.title}</h3>
               <p className="top-property-meta">
                 <i className="fas fa-bed"></i> {property.bedrooms} Beds
                 <span> | </span>

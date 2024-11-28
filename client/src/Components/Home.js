@@ -3,6 +3,7 @@ import '../Home.css';
 import Properties from './Properties';
 import TopProperties from "./TopProperties";
 import Services from "./Services";
+import CountSection from "./CountSection";
 import Agents from "./Agents";
 import Recommended from "./Recommended";
 import Neighbourhoods from "./Neighbourhoods";
@@ -68,6 +69,7 @@ const Home = () => {
      
 
       <Services />
+      <CountSection />
      
       <Agents />
       <Schedule />

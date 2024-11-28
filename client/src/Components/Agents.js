@@ -3,20 +3,17 @@ import '../Agents.css';
 import agentImage1 from '../images/agent1.jpg';
 import agentImage2 from '../images/agent2.jpg';
 import agentImage3 from '../images/agent3.jpeg';
-import agentImage4 from '../images/agent4.jpg';
-import agentImage5 from '../images/agent5.jpeg';
-import agentImage6 from '../images/agent6.jpeg';
 
 const agents = [
   {
     image: agentImage1,
-    name: 'Jane Doe',
+    name: 'Leah Clement',
     title: 'Senior Real Estate Agent',
     contact: 'janedoe@example.com',
   },
   {
     image: agentImage2,
-    name: 'John Smith',
+    name: 'Tina Smith',
     title: 'Real Estate Agent',
     contact: 'johnsmith@example.com',
   },
@@ -26,24 +23,7 @@ const agents = [
     title: 'Property Consultant',
     contact: 'emilyclark@example.com',
   },
-  {
-    image: agentImage4,
-    name: 'Michael Brown',
-    title: 'Realtor',
-    contact: 'michaelbrown@example.com',
-  },
-  {
-    image: agentImage5,
-    name: 'Sarah Wilson',
-    title: 'Luxury Property Agent',
-    contact: 'sarahwilson@example.com',
-  },
-  {
-    image: agentImage6,
-    name: 'David Lee',
-    title: 'Commercial Real Estate Specialist',
-    contact: 'davidlee@example.com',
-  },
+  
 ];
 
 const Agents = () => {

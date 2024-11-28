@@ -17,8 +17,7 @@ const Neighbourhoods = () => {
       <div className="intro">
         <h2 className="page-title">Our Neighbourhoods</h2>
         <p className="intro-text">
-          Quis nulla blandit vulputate morbi adipiscing sem vestibulum. Nulla turpis integer dui sed posuere sem.
-          Id molestie mi arcu gravida lorem potenti.
+          See Our Neighbourhoods
         </p>
       </div>
 

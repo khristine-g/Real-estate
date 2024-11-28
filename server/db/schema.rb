@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_17_075617) do
+ActiveRecord::Schema.define(version: 2024_09_17_075740) do
+
+  create_table "agents", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "email"
+    t.string "phone"
+    t.text "about"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.integer "listing_id", null: false
@@ -34,7 +44,10 @@ ActiveRecord::Schema.define(version: 2024_07_17_075617) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "agent_id", null: false
+    t.index ["agent_id"], name: "index_listings_on_agent_id"
   end
 
   add_foreign_key "images", "listings"
+  add_foreign_key "listings", "agents"
 end

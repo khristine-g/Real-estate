@@ -20,16 +20,10 @@ const Schedule = () => {
     <div className="animate-on-scroll">
     <div className="schedule-container">
       <div className="schedule-row">
-        <div className="schedule-image">
-          <img
-            src="https://i.pinimg.com/736x/32/cd/51/32cd51852b0c01cf160d129733942d55.jpg"
-            alt="Property"
-            className="property-img"
-          />
-        </div>
+        
 
         <div className="schedule-form">
-          <h2>Book Your Appointment</h2>
+          <h1>Schedule a Visit</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="date">Select a Date</label>
@@ -91,6 +85,13 @@ const Schedule = () => {
               Book Appointment
             </button>
           </form>
+        </div>
+        <div className="schedule-image">
+          <img
+            src=" https://www.home-designing.com/wp-content/uploads/2020/04/modern-home-on-the-coast.jpg"
+            alt="Property"
+            className="property-img"
+          />
         </div>
       </div>
       </div>

@@ -41,7 +41,7 @@
 }
 
 .agent-card:hover .agent-image {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .agent-card:hover .social-icons {
@@ -74,7 +74,7 @@
 }
 
 .social-icon {
-  color: white;
+  color: #333;
   font-size: 1.5rem;
   margin: 0 10px;
   transition: color 0.3s ease;
@@ -93,12 +93,12 @@
 .agent-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
 .agent-title {
   font-size: 1.1rem;
-  color: #7f8c8d;
+  color: #fff;
   margin-bottom: 15px;
 }
 
