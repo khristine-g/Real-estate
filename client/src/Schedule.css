@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 50px;
-  height: 90vh;
+  height: 80vh;
   margin-top: 80px;
   margin-bottom: 80px;
   border-radius: 15px;
@@ -21,7 +21,7 @@
 
 /* Schedule Form */
 .schedule-form {
-  flex: 0 0 40%; /* Takes up 30% of the width */
+  flex: 0 0 50%; /* Takes up 30% of the width */
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
 }
 
 .schedule-image img {
-  width: 60vw;
+  width: 50vw;
   height: 80vh;
   object-fit: cover; /* Ensures the image covers the area without distortion */
 }
@@ -99,7 +99,7 @@ input[type='email']:focus {
 .time-slot {
   padding: 15px;
   font-size: 1.1rem;
-  background-color: #007bff;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 10px;
@@ -110,11 +110,11 @@ input[type='email']:focus {
 }
 
 .time-slot:hover {
-  background-color: #0056b3;
+  background-color:#333;
 }
 
 .time-slot.selected {
-  background-color: #0056b3;
+  background-color: teal;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
