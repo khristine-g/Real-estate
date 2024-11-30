@@ -34,7 +34,7 @@ const Counter = ({ count, label, icon }) => {
 
   useEffect(() => {
     let start = 0;
-    const duration = 2000; // 2 seconds
+    const duration = 4000; // 2 seconds
     const increment = count / duration * 10;
 
     const counterInterval = setInterval(() => {

@@ -1,66 +1,118 @@
 /* Count Section Styles */
 .count-section {
-    background-color: rgb(2, 46, 46);
-    padding: 60px 20px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .count-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 30px;
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-  
-  /* Counter Item Styles */
-  .counter-item {
-    background-color: #f9f9f9;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .counter-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .counter-icon {
-    font-size: 40px;
-    color: teal;
-    margin-bottom: 15px;
-  }
-  
-  .counter-number {
-    font-size: 36px;
-    font-weight: bold;
-    color: teal;
-    margin-bottom: 10px;
-  }
-  
-  .counter-label {
-    font-size: 16px;
-    color: teal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  background-color: rgb(2, 46, 46);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.count-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Counter Item Styles */
+.counter-item {
+  background-color: #f9f9f9;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.counter-icon {
+  font-size: 40px;
+  color: teal;
+  margin-bottom: 15px;
+}
+
+.counter-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: teal;
+  margin-bottom: 10px;
+}
+
+.counter-label {
+  font-size: 16px;
+  color: teal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
 .animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
-  
-  
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .count-section {
+    padding: 40px 10px;
+  }
+
+  .count-grid {
+    grid-template-columns: 1fr 1fr; /* Display two columns for smaller screens */
+    gap: 20px;
+  }
+
+  .counter-item {
+    padding: 30px; /* Reduce padding for smaller screens */
+    height: 200px; /* Adjust the height of counter items */
+  }
+
+  .counter-icon {
+    font-size: 30px; /* Smaller icon size */
+  }
+
+  .counter-number {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .counter-label {
+    font-size: 14px; /* Smaller label font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .count-grid {
+    grid-template-columns: 1fr; /* Stack all items in a single column on very small screens */
+    gap: 15px;
+  }
+
+  .counter-item {
+    padding: 20px; /* Further reduce padding on very small screens */
+    height: 180px; /* Adjust height further for mobile screens */
+  }
+
+  .counter-icon {
+    font-size: 25px; /* Further reduce icon size */
+  }
+
+  .counter-number {
+    font-size: 24px; /* Further adjust font size */
+  }
+
+  .counter-label {
+    font-size: 12px; /* Further adjust label font size */
+  }
+}

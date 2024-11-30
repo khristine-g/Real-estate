@@ -1,41 +1,54 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import '../Navbar.css';
+import "../Navbar.css";
 import { FaCity } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); 
+      setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <nav className={`real-navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-    
-<div className="navbar-brand">
-  <FaCity className="logo-icon"  /> </div>
-  <h2 className="company-name">Urban Realty</h2>
-  
-      <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/agents">Agents</Link></li>
+    <nav className={`real-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <div className="navbar-brand">
+        <FaCity className="logo-icon" />
+        <h2 className="company-name">Urban Realty</h2>
+      </div>
+
+      <div className="hamburger-menu" onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        <a href="#home" onClick={toggleMenu}>
+          <li>Home</li>
+        </a>
+        <a href="#services" onClick={toggleMenu}>
+          <li>Services</li>
+        </a>
+        <a href="#footer" onClick={toggleMenu}>
+          <li>Contact</li>
+        </a>
+        <a href="#agents" onClick={toggleMenu}>
+          <li>Agents</li>
+        </a>
       </ul>
     </nav>
   );
 };
 
 export default Navbar;
- 

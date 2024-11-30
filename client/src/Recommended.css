@@ -1,195 +1,200 @@
 .recommended {
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 1200px;
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    margin-bottom: 100px;
-  }
-  
-  .property-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-   
-  }
-  
-  .property-button {
-    border-radius: 68px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .property-button:hover {
-    background-color: teal;
-    color: white;
-    transform: translateY(-2px);
-  }
-  
-  .property-button.active {
-    /* background-color: #3498db; */
-    background-color: teal;
-    color: white;
-  }
-  .view-all-properties-button{
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
 
-   margin-left: 780px;
-   border-radius: 68px;
-   padding: 5px;
-   width: 250px;
-   height: auto;
-   font-weight: bold;
-   color: white;
-   background-color: teal;
-  }
-  .view-all-properties-button:hover{
+.property-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
 
-    background-color: rgb(1, 70, 70);
-    transform: translateY(-2px);
-  }
-  
-  /* Recommended Properties */
-  .recommended-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2c3e50;
-  }
-  .recommended-sub-title{
-    text-align: center;
-    margin-bottom: 10px;
-    color: teal;
-    font-size: 20px;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.property-button {
+  border-radius: 68px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.property-button:hover {
+  background-color: teal;
+  color: white;
+  transform: translateY(-2px);
+}
 
+.property-button.active {
+  background-color: teal;
+  color: white;
+}
 
-  }
-  
-  .recommended-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  /* Property Card */
+.view-all-properties-button {
+  display: block;
+  margin: 30px auto;
+  border-radius: 68px;
+  padding: 10px 20px;
+  width: auto;
+  font-weight: bold;
+  color: white;
+  background-color: teal;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-all-properties-button:hover {
+  background-color: rgb(1, 70, 70);
+  transform: translateY(-2px);
+}
+
+.recommended-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.recommended-sub-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: teal;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.recommended-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center align for better aesthetics */
+}
+
+/* Property Card */
+.recommended-property-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.33% - 20px); /* 3 cards per row with spacing */
+}
+
+.recommended-property-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recommended-property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recommended-property-info {
+  padding: 15px;
+}
+
+.recommended-property-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.recommended-property-meta {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.recommended-property-location {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin-bottom: 15px;
+}
+
+.recommended-property-divider {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 15px 0;
+}
+
+.recommended-agent-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.recommended-agent-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  margin-right: 10px;
+}
+
+.recommended-agent-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-agent-name {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.recommended-property-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: teal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .recommended-property-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33.33% - 15px); /* 3 cards per row */
+    width: calc(50% - 20px); /* 2 cards per row */
   }
-  
-  .recommended-property-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .recommended-property-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .recommended-property-info {
-    padding: 15px;
-  }
-  
-  .recommended-property-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2c3e50;
-  }
-  
-  .recommended-property-meta {
+
+  .property-button {
     font-size: 0.9rem;
-    color: #7f8c8d;
-    margin-bottom: 10px;
+    padding: 8px 15px;
   }
-  
-  .recommended-property-location {
-    font-size: 0.9rem;
-    color: #95a5a6;
-    margin-bottom: 15px;
+
+  .recommended-title {
+    font-size: 1.8rem;
   }
-  
-  /* Divider */
-  .recommended-property-divider {
-    border: 0;
-    height: 1px;
-    background: #eee;
-    margin: 15px 0;
+}
+
+@media (max-width: 480px) {
+  .recommended-property-card {
+    width: 100%; /* 1 card per row */
   }
-  
-  /* Agent Info */
-  .recommended-agent-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-top: 1px solid #eee;
+
+  .property-buttons {
+    gap: 5px;
   }
-  
-  .recommended-agent-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #eee;
-    margin-right: 10px;
+
+  .property-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
   }
-  
-  .recommended-agent-details {
-    display: flex;
-    flex-direction: column;
+
+  .recommended-title {
+    font-size: 1.5rem;
   }
-  
-  .recommended-agent-name {
-    font-size: 0.9rem;
-    color: #2c3e50;
-    font-weight: bold;
-  }
-  
-  .recommended-property-price {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: teal;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .recommended-property-card {
-      width: calc(50% - 10px); /* 2 cards per row */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .recommended-property-card {
-      width: 100%; /* 1 card per row */
-    }
-  }
-  
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(200px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-  }
-  
-  .animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Schedule.css';
 import { Modal, Button } from 'react-bootstrap'; // For the Bootstrap modal
+// import propertyImage6 from '../images/property6.jpg';
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -18,8 +19,11 @@ const Schedule = () => {
 
   return (
     <div className="animate-on-scroll">
+      
     <div className="schedule-container">
+   
       <div className="schedule-row">
+       
         
 
         <div className="schedule-form">
@@ -88,7 +92,7 @@ const Schedule = () => {
         </div>
         <div className="schedule-image">
           <img
-            src=" https://www.home-designing.com/wp-content/uploads/2020/04/modern-home-on-the-coast.jpg"
+           src="https://st.hzcdn.com/simgs/pictures/exteriors/brentwood-corr-contemporary-homes-img~ce615e29036ab030_14-3721-1-5d66026.jpg "
             alt="Property"
             className="property-img"
           />

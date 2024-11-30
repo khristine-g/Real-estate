@@ -1,166 +1,198 @@
+/* Main Container */
 .schedule-container {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-    /* background-color: rgb(2, 46, 46); */
-   
-    height: 90vh;
-    margin-top: 50px;
-    margin-bottom: 50px;
-   
-  }
-  
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  height: 90vh;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  border-radius: 15px;
+  /* background-color: #f9f9f9; */
+}
+
+/* Schedule Row */
+.schedule-row {
+  display: flex;
+  width: 70vw;
+  border-radius: 150px;
+  overflow: hidden;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1); /* Softer shadow for modern look */
+}
+
+/* Schedule Form */
+.schedule-form {
+  flex: 0 0 40%; /* Takes up 30% of the width */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #ffffff; /* White for clean look */
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensures the form takes up the full height */
+}
+
+/* Schedule Image */
+.schedule-image {
+
+
+  position: relative;
+}
+
+.schedule-image img {
+  width: 60vw;
+  height: 80vh;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Header */
+.schedule-form h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Date and Time Inputs */
+input.date-picker,
+input[type='text'],
+input[type='email'] {
+  padding: 14px 20px;
+  font-size: 1.2rem;
+  border-radius: 60px;
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.date-picker:focus,
+input[type='text']:focus,
+input[type='email']:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Time Slot Buttons */
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.time-slot {
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.time-slot:hover {
+  background-color: #0056b3;
+}
+
+.time-slot.selected {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 50%;
+  padding: 15px;
+  font-size: 1.3rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 25%;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal-content {
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+}
+
+.success-icon {
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.check-icon {
+  font-size: 70px;
+}
+
+.modal-body h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.modal-body p {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .schedule-row {
-    display: flex;
-    width: 100%;
-   
-   
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-  }
-  
-  .schedule-image {
-    flex: 1;
-    background-color: #e1e1e1;
-    
-  }
-  
-  .property-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .schedule-form {
-    flex: 1;
-    padding: 40px;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: #ffffff;
   }
-  
-  .schedule-form h2 {
-    font-size: 2rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    
-  }
-  
-  label {
-    font-size: 1.2rem;
-    color: #555;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input.date-picker,
-  input[type='text'],
-  input[type='email'] {
-    padding: 12px;
-    font-size: 1.2rem;
-    border-radius: 60px;
-    border: 1px solid #ccc;
-    width: 100%;
-    transition: border-color 0.3s ease;
-  }
-  
-  input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  .slots-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .time-slot {
-    padding: 12px;
-    font-size: 1.1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .time-slot:hover,
-  .time-slot.selected {
-    background-color: black;
-  }
-  
-  .submit-btn {
-    width: 40%;
-    padding: 15px;
-    font-size: 1.3rem;
-    background-color: rgb(2, 46, 46);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 250px;
-    margin-top: 50px;
-  }
-  
-  .submit-btn:hover {
-    background-color: #333;
-  }
-  
-  /* Modal Styling */
-  .modal-content {
-    text-align: center;
+
+  .schedule-form {
     padding: 20px;
   }
-  
-  .success-icon {
-    font-size: 50px;
-    color: black;
-    margin-bottom: 20px;
+
+  .submit-btn {
+    width: 60%;
+    margin-left: 20%;
   }
-  
-  .check-icon {
-    font-size: 60px;
-  }
-  
-  .modal-body h3 {
-    font-size: 1.8rem;
-    color: #333;
-  }
-  
-  .modal-body p {
-    color: #555;
-    font-size: 1.1rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .schedule-row {
-      flex-direction: column;
-    }
-  
-    .schedule-form {
-      padding: 20px;
-    }
-  }
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(150px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-  }
-  
-  .animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

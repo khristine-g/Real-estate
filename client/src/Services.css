@@ -1,4 +1,4 @@
-/* Services Section Styles */
+/* General Styles */
 .services {
   background-color: #f9f9f9;
   padding: 80px 20px;
@@ -24,10 +24,11 @@
 /* Grid Layout for Services */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Service Card Styles */
@@ -51,7 +52,7 @@
 .service-image {
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 220px;
   width: 100%;
   transition: transform 0.3s ease;
 }
@@ -110,16 +111,87 @@
   transform: translateX(5px);
 }
 
-
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(200px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+/* Scroll Animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
 .animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
-  
-  
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .services-title {
+    font-size: 32px;
+  }
+
+  .services-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    gap: 15px;
+  }
+
+  .service-card {
+    margin: 0 auto;
+  }
+
+  .service-content h3 {
+    font-size: 20px;
+  }
+
+  .service-content p {
+    font-size: 14px;
+  }
+
+  .learn-more-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 50px 10px;
+  }
+
+  .services-title {
+    font-size: 24px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .service-content h3 {
+    font-size: 18px;
+  }
+
+  .service-content p {
+    font-size: 13px;
+  }
+
+  .learn-more-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

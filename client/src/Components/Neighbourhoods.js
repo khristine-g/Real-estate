@@ -1,13 +1,19 @@
 import React from 'react';
 import '../Neighbourhoods.css';
+import NeighbourhoodImage1 from '../images/neighbourhood1.jpg';
+import NeighbourhoodImage2 from '../images/neighbourhood2.jpg';
+import NeighbourhoodImage3 from '../images/neighbourhood3.jpeg';
+import NeighbourhoodImage4 from '../images/neighbourhood4.jpg';
+import NeighbourhoodImage5 from '../images/neighbourhood5.jpg';
+import NeighbourhoodImage6 from '../images/neighbourhood6.jpg';
 
 const neighbourhoods = [
-  { id: 1, name: "Sunny Heights", description: "A peaceful community with scenic views.", image: "https://media.california.com/media/_versions_jpg/articles/richest_neighborhoods_in_america__5443x3167____v1222x580__.jpg" },
-  { id: 2, name: "Green Acres", description: "Spacious homes surrounded by nature.", image: "https://media.california.com/media/_versions_jpg/articlecomponent/short_hills_new_jersey__1000x667____v1220x__.jpg" },
-  { id: 3, name: "Downtown Bliss", description: "Vibrant and modern city living.", image: "https://blog.sothebysrealty.co.uk/hubfs/Richest%20Neighbourhoods%20in%20London-jpg.jpeg" },
-  { id: 4, name: "Hillside Haven", description: "A serene and quiet retreat on the hillside.", image: "https://koala.sh/api/image/v2-hysgx-ougt8.jpg?width=1216&height=832&dream" },
-  { id: 5, name: "Ocean Breeze", description: "Coastal living with stunning ocean views.", image: "https://koala.sh/api/image/v2-k4cfh-u3zlm.jpg?width=1216&height=832&dream" },
-  { id: 6, name: "Urban Oasis", description: "A perfect blend of city life and nature.", image: "https://koala.sh/api/image/v2-k4cgg-bbffq.jpg?width=1216&height=832&dream" }
+  { id: 1, name: "Sunny Heights", description: "A peaceful community with scenic views.", image: NeighbourhoodImage1 },
+  { id: 2, name: "Green Acres", description: "Spacious homes surrounded by nature.", image: NeighbourhoodImage2},
+  { id: 3, name: "Downtown Bliss", description: "Vibrant and modern city living.", image: NeighbourhoodImage3},
+  { id: 4, name: "Hillside Haven", description: "A serene and quiet retreat on the hillside.", image: NeighbourhoodImage4 },
+  { id: 5, name: "Ocean Breeze", description: "Coastal living with stunning ocean views.", image: NeighbourhoodImage5},
+  { id: 6, name: "Urban Oasis", description: "A perfect blend of city life and nature.", image: NeighbourhoodImage6}
 ];
 
 const Neighbourhoods = () => {

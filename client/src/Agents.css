@@ -1,11 +1,10 @@
-/* Agents component styling */
+/* Agents Component Styles */
 .agents-container {
   margin: 50px auto;
   padding: 20px;
   max-width: 1200px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  margin-top: 100px;
 }
 
 .agents-title {
@@ -14,16 +13,15 @@
   margin-bottom: 30px;
   color: #2c3e50;
 }
-.agents-sub-title{
 
- font-size: 20px; 
- color: teal;
- 
+.agents-sub-title {
+  font-size: 20px;
+  color: teal;
 }
 
 .agents-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Show 3 columns */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexible grid */
   gap: 30px;
   justify-items: center;
 }
@@ -32,7 +30,7 @@
   background-color: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 280px;
+  width: 100%;
   height: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -87,7 +85,6 @@
 .agent-info {
   padding: 10px;
   background-color: rgb(3, 100, 100);
- 
 }
 
 .agent-name {
@@ -119,16 +116,32 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .agents-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .agents-grid {
-    grid-template-columns: repeat(1, 1fr); /* Show 1 column on smaller screens */
+    grid-template-columns: 1fr; /* Stack the cards in 1 column for small screens */
   }
 
   .agent-card {
     max-width: 90%;
     margin-bottom: 20px;
   }
+
+  .agent-info {
+    padding: 15px;
+  }
+
+  .social-icons {
+    bottom: 5px; /* Slightly reduce space on smaller screens */
+  }
 }
+
+/* Animation for Scroll Effects */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(200px);
@@ -139,6 +152,3 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-
- 

@@ -4,6 +4,7 @@ import "../Footer.css"; // Import the CSS file
 
 const Footer = () => {
   return (
+    <div id="footer">
     <footer className="footer">
       <div className="container">
         {/* Logo and Site Name */}
@@ -72,6 +73,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 

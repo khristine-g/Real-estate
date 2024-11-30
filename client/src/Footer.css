@@ -1,149 +1,138 @@
 .footer {
-    /* background-color: rgb(3, 92, 92);   */
-    background-color: rgb(2, 46, 46);
-    color: #fff;
-    padding: 50px 10%; /* Add padding inside the footer */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in width */
-    margin: 0; /* Remove default margin that may cause the white box */
-  }
-  
-  /* Make sure the footer content spans the full width */
-  .footer .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%; /* Ensure the container fills the footer */
-    margin: 0;
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-  }
-  
-  /* Logo Section */
-  .footer .logo-section {
-    flex: 1;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-right: 300px;
-    
-  }
-  
-  /* Logo Icon */
-  .footer .logo-icon {
-    color: #fff;
-  }
-  
-  /* Site Name */
-  .footer .site-name {
-    color: #fff;
-    font-size: 24px;
-    margin-left: 10px;
-    font-weight: bold;
-  }
-  
-  /* Paragraph below the Logo */
-  .footer .logo-paragraph {
-   
-    text-align: center;
-    margin-bottom: 20px;
-   
-  }
-  
-  .footer .logo-paragraph p {
-    font-size: 1rem;
-    color: #fff;
-    
-    padding: 10px;
-  }
-  
-  /* Contact Section */
-  .footer .footer-contact-section {
-    
-    margin-bottom: 20px;
-    
-  }
-  
-  .footer .footer-contact-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footer .footer-contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .footer .footer-icon {
-    margin-right: 15px;
-    color: #fff;
-    font-size: 20px; /* Adjust icon size */
-  }
-  
-  /* Address Section with Location Icon */
-  .footer .address {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer .address .footer-icon {
-    margin-right: 10px; /* Space between location icon and text */
-  }
-  
-  /* Links Section */
-  .footer .links-section {
-    flex: 1;
-    margin-bottom: 20px;
-  }
-  
-  .footer .link-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer .explore-section {
-    flex: 1;
-    margin-bottom: 20px;
-  }
-  
-  /* Heading style */
-  .footer h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  /* Link styles */
-  .footer a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .footer a:hover {
-    color: #f0a500;
-  }
-  
-  .footer .link-list li {
-    margin-bottom: 10px;
-  }
-  
-  .footer .link-list a {
-    display: inline-block;
-  }
-  
-  /* Add the '>' symbol using a CSS pseudo-element */
-  .footer .link-list a::before {
-    content: ">";
-    margin-right: 8px;
-    color: #f0a500;  /* Style the '>' symbol */
-  }
-  
-  /* Ensuring no box shadow or padding/margin is leaking from sections */
-  footer, .container, .footer .footer-contact-section, .footer .links-section, .footer .explore-section {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
+  background: linear-gradient(135deg, rgba(2, 46, 46, 0.9), rgba(0, 0, 0, 0.8)); /* Stylish gradient */
+  color: #fff;
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.footer .logo-section {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-right: 100px;
+}
+
+.footer .logo-icon {
+  color: #fff;
+  font-size: 36px; /* Larger logo icon for modern look */
+  margin-bottom: 15px;
+}
+
+.footer .site-name {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer .logo-paragraph p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+/* Contact Section */
+.footer .footer-contact-section {
+  margin-bottom: 40px; /* More space for a clean look */
+  text-align: left;
+  flex: 1;
+}
+
+.footer .footer-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .footer-contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer .footer-icon {
+  margin-right: 15px;
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer .footer-icon:hover {
+  color: #f0a500; /* Gold color on hover for icons */
+}
+
+.footer .address {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.footer .address .footer-icon {
+  margin-right: 10px;
+}
+
+/* Links Section */
+.footer .links-section, .footer .explore-section {
+  flex: 1;
+  margin-bottom: 40px; /* Extra space between sections */
+  text-align: left;
+}
+
+.footer h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer .link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .link-list li {
+  margin-bottom: 15px;
+}
+
+.footer .link-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.footer .link-list a:hover {
+  color: #f0a500; /* Hover effect on links */
+}
+
+.footer .link-list a::before {
+  content: ">";
+  margin-right: 8px;
+  color: #f0a500;  /* Gold '>' symbol */
+}
+
+/* Ensure no box shadow or padding/margin is leaking from sections */
+footer, .container, .footer .footer-contact-section, .footer .links-section, .footer .explore-section {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

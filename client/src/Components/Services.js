@@ -28,6 +28,8 @@ const Services = () => {
   ];
 
   return (
+    <>
+    <div id="services">
     <div className="animate-on-scroll">
     <section className="services">
       <div className="container">
@@ -53,6 +55,8 @@ const Services = () => {
       </div>
     </section>
     </div>
+    </div>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import Neighbourhoods from "./Neighbourhoods";
 import Schedule from "./Schedule";
 import Footer from "./Footer";
 
-// import InteriorImage from '../images/interior1.jpg';
+
 
 const Home = () => {
   const slides = [
@@ -40,6 +40,7 @@ const Home = () => {
 
   return (
     <>
+     <div id="home">
       
       <div className="slideshow-container">
         {slides.map((slide, index) => (
@@ -60,6 +61,7 @@ const Home = () => {
           </div>
         ))}
       </div>
+      </div>
       
     
       <Properties />
@@ -70,9 +72,10 @@ const Home = () => {
 
       <Services />
       <CountSection />
+      <Schedule />
      
       <Agents />
-      <Schedule />
+     
       <Footer />
     </>
   );

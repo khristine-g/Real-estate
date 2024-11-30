@@ -28,6 +28,7 @@ const agents = [
 
 const Agents = () => {
   return (
+    <div id="agents">
     <div className="animate-on-scroll">
     <div className="agents-container">
       <h2 className="agents-sub-title">Team Members</h2>
@@ -65,6 +66,7 @@ const Agents = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
     </div>
   );
