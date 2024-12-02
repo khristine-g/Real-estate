@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import '../Home.css';
 import Properties from './Properties';
 import TopProperties from "./TopProperties";
@@ -7,10 +7,8 @@ import CountSection from "./CountSection";
 import Agents from "./Agents";
 import Recommended from "./Recommended";
 import Neighbourhoods from "./Neighbourhoods";
-import Schedule from "./Schedule";
+import Schedule from "./Schedule";  // Import Schedule component
 import Footer from "./Footer";
-
-
 
 const Home = () => {
   const slides = [
@@ -20,7 +18,6 @@ const Home = () => {
     },
     {
       image: 'https://www.craftedbeds.co.uk/cdn/shop/articles/c6229643564835.57f4204983b16.jpg?v=1654414798',
-  
       text: 'Discover Your Comfortable & Flexible living Space'
     },
     {
@@ -31,6 +28,9 @@ const Home = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Create a ref for the Schedule component to scroll to it
+  const scheduleRef = useRef(null);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
@@ -38,31 +38,35 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, [slides.length]);
 
+  // Function to scroll to the Schedule component when the button is clicked
+  const handleScheduleVisit = () => {
+    if (scheduleRef.current) {
+      scheduleRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-     <div id="home">
-      
-      <div className="slideshow-container">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`slide ${index === currentSlide ? "active" : ""}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
-            <div className="overlay">
-              <h1 className="home-heading">{slide.text}</h1>
-              <div className="visit-container">
-                
-              <button className="visit-button">
-                     Schedule a Visit <span className="arrow-icon">→</span>
-              </button>
+      <div id="home">
+        <div className="slideshow-container">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`slide ${index === currentSlide ? "active" : ""}`}
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="overlay">
+                <h1 className="home-heading">{slide.text}</h1>
+                <div className="visit-container">
+                  <button className="visit-button" onClick={handleScheduleVisit}>
+                    Schedule a Visit <span className="arrow-icon">→</span>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      </div>
-      
     
       <Properties />
       <Recommended />
@@ -70,16 +74,20 @@ const Home = () => {
       <TopProperties />
       <CountSection />
       <Services />
-      <Schedule />
+
+      {/* Schedule Component with the ref to enable scrolling to it */}
+      <div ref={scheduleRef}>
+        <Schedule />
+      </div>
+
       <Agents />
       <Footer />
-     
-  
     </>
   );
 };
 
 export default Home;
+
 
 
 

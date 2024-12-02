@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Properties from './Components/Properties';
 import PropertyDetail from './Components/PropertyDetail';
+
 import Contact from './Components/Contact';
 import useScrollAnimation from "./Components/useScrollAnimation.js";
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/property/:id" element={<PropertyDetail />} />
+        
         </Routes>
       </div>
     </Router>
