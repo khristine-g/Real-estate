@@ -85,7 +85,7 @@
 
 .agent-info {
   padding: 10px;
-  background-color: rgb(3, 100, 100);
+  background: linear-gradient(135deg, rgba(2, 46, 46, 0.9), rgba(0, 0, 0, 0.8)); /* Stylish gradient */
 }
 
 .agent-name {
