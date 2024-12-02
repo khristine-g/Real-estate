@@ -47,7 +47,7 @@ He is known as one of the smartest and most dedicated agents in the City. He has
 listing1 = Listing.create!(
   title: 'Autumn Breeze Estate',
   location: 'Karen',
-  price: 200000,
+  price: 200_000 ,
   bedrooms: 4,
   bathrooms: 2,
   size: 900,
@@ -68,7 +68,7 @@ listing1.images.create!([
 listing2 = Listing.create!(
   title: 'Alpine Zenith Chateau',
   location: 'Muthaiga',
-  price: 150000,
+  price: 150_000 ,
   bedrooms: 3,
   bathrooms: 2,
   size: 1200,
@@ -89,7 +89,7 @@ listing2.images.create!([
 listing3 = Listing.create!(
   title: 'Luxury Villa',
   location: 'Diani',
-  price: 400000,
+  price: 400_000 , 
   bedrooms: 5,
   bathrooms: 4,
   size: 5000,
@@ -110,7 +110,7 @@ listing3.images.create!([
 listing4 = Listing.create!(
   title: 'Amberwood Haven',
   location: 'Runda',
-  price: 350000,
+  price: 350_000 ,
   bedrooms: 5,
   bathrooms: 3,
   size: 2000,
@@ -131,7 +131,7 @@ listing4.images.create!([
 listing5 = Listing.create!(
   title: 'Adoria Garden Nest',
   location: 'Kileleshwa',
-  price: 300000,
+  price: 300_000 ,
   bedrooms: 5,
   bathrooms: 3,
   size: 1500,
@@ -152,7 +152,7 @@ listing5.images.create!([
 listing6 = Listing.create!(
   title: 'Cozy Cottage',
   location: 'Kitusuru',
-  price: 350000,
+  price: 350_000 ,
   bedrooms: 3,
   bathrooms: 1,
   size: 1200,

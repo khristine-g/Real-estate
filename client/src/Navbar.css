@@ -4,7 +4,7 @@
   align-items: center;
   padding: 20px 30px;
   background-color: transparent;
-  color: #ccc;
+  color: white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -18,6 +18,10 @@
   background-color: rgba(0, 36, 36, 0.8);
   color: white;
 }
+.navbar-property-detail {
+  background-color: rgba(0, 36, 36, 0.8); /* Darker background for property detail page */
+  color: #f0f0f0; /* Change text color if needed */
+}
 
 .navbar-brand {
   display: flex;
@@ -29,9 +33,14 @@
   color: white;
   letter-spacing: 2px;
 }
+.company-name{
+
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .logo-icon {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-right: 10px;
   color: white;
   animation: bounce 2s infinite ease-in-out;
@@ -50,18 +59,19 @@
   list-style: none;
   display: flex;
   gap: 40px;
-  margin: 0;
+ margin-right: 600px;
   align-items: center;
 }
 
 .navbar-links li {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .navbar-links a {
   color: inherit;
   text-decoration: none;
   position: relative;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
 .navbar-links a::after {

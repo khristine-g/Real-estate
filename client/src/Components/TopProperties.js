@@ -21,7 +21,7 @@ const TopProperties = () => {
       bedrooms: 3,
       bathrooms: 2,
       size: 1500,
-      location: 'New York, NY',
+      location: 'Kitisuru, NRB',
       price: 350000,
       agent: { image: agentImage1, name: 'Jane Doe' },
     },
@@ -31,7 +31,7 @@ const TopProperties = () => {
       bedrooms: 5,
       bathrooms: 4,
       size: 3000,
-      location: 'Los Angeles, CA',
+      location: 'Runda, NRB',
       price: 750000,
       agent: { image: agentImage4, name: 'John Smith' },
     },
@@ -41,7 +41,7 @@ const TopProperties = () => {
       bedrooms: 2,
       bathrooms: 1,
       size: 800,
-      location: 'Austin, TX',
+      location: 'Karen, NRB',
       price: 200000,
       agent: { image: agentImage2, name: 'Emily Clark' },
     },
@@ -51,7 +51,7 @@ const TopProperties = () => {
       bedrooms: 4,
       bathrooms: 3,
       size: 2500,
-      location: 'Miami, FL',
+      location: 'Muthaiga, NRB',
       price: 900000,
       agent: { image: agentImage5, name: 'Michael Brown' },
     },
@@ -61,7 +61,7 @@ const TopProperties = () => {
       bedrooms: 3,
       bathrooms: 2,
       size: 1800,
-      location: 'Denver, CO',
+      location: 'Runda, NRB',
       price: 400000,
       agent: { image: agentImage3, name: 'Sarah Wilson' },
     },
@@ -71,7 +71,7 @@ const TopProperties = () => {
       bedrooms: 1,
       bathrooms: 1,
       size: 600,
-      location: 'Seattle, WA',
+      location: 'Karen, NRB',
       price: 300000,
       agent: { image: agentImage6, name: 'David Lee' },
     },
@@ -84,11 +84,11 @@ const TopProperties = () => {
 
          <h2 className="top-property-title">Best Property Value</h2>
       <div className="top-property-buttons">
-        <button className="property-button active">Apartment</button>
-        <button className="property-button">Villa</button>
-        <button className="property-button">Studio</button>
-        <button className="property-button">House</button>
-        <button className="property-button">Office</button>
+        <button className="top-property-button active">Apartment</button>
+        <button className="top-property-button">Villa</button>
+        <button className="top-property-button">Studio</button>
+        <button className="top-property-button">House</button>
+        <button className="top-property-button">Office</button>
       </div>
      
       <div className="top-properties-grid">

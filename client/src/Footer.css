@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vw;
   margin: 0;
 }
 
@@ -41,10 +41,10 @@
 }
 
 .footer .logo-paragraph p {
-  font-size: 1.1rem;
+  font-size: 16px;
   color: #ddd;
   line-height: 1.6;
-  font-family: 'Roboto', sans-serif;
+
   margin-top: 15px;
   margin-bottom: 0;
 }
@@ -91,8 +91,9 @@
 /* Links Section */
 .footer .links-section, .footer .explore-section {
   flex: 1;
-  margin-bottom: 40px; /* Extra space between sections */
+  margin-bottom: 60px; /* Extra space between sections */
   text-align: left;
+ 
 }
 
 .footer h3 {

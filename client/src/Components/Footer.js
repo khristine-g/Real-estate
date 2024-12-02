@@ -43,8 +43,8 @@ const Footer = () => {
           </div>
           <div className="address">
             <FaLocationArrow className="footer-icon" />
-            <p>789 Inner Lane, Holy Park,</p>
-            <p>California, USA</p>
+           
+            <p>Nairobi, Kenya</p>
           </div>
         </div>
 

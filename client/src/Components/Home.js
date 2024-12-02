@@ -68,15 +68,13 @@ const Home = () => {
       <Recommended />
       <Neighbourhoods />
       <TopProperties />
-     
-
-      <Services />
       <CountSection />
+      <Services />
       <Schedule />
-     
       <Agents />
-     
       <Footer />
+     
+  
     </>
   );
 };

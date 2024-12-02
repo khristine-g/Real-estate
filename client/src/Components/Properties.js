@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { FaBed, FaBath, FaExpand } from 'react-icons/fa';
 import '../Properties.css';
 
-
 const Properties = () => {
   const [properties, setProperties] = useState([]);
 
@@ -19,39 +18,39 @@ const Properties = () => {
     <div className="properties-container">
       <h1 className="page-title">Featured Properties</h1>
       <p className="page-paragraph">Browse our latest hot offers</p>
-      <div className="carousel-wrapper">
-        <div className="carousel">
-          {[...properties, ...properties].map((property, index) => (
-            <Link
-              key={`${property.id}-${index}`}
-              to={`/property/${property.id}`}
-              className="property-link"
-            >
-              <div className="property-card">
-                <img
-                  src={property.image}
-                  alt={property.title}
-                  className="property-image"
-                />
-                <div className="property-info">
-                  <h2 className="property-title">{property.title}</h2>
-                  <h3 className="property-price">$ {property.price}</h3>
-                  <div className="property-icons">
-                    <span>
-                      <FaBed /> {property.bedrooms}
-                    </span>
-                    <span>
-                      <FaBath /> {property.bathrooms}
-                    </span>
-                    <span>
-                      <FaExpand /> {property.size} Sqft
-                    </span>
-                  </div>
+      <div className="properties-grid">
+        {properties.map((property) => (
+          <Link
+            key={property.id}
+            to={`/property/${property.id}`}
+            className="property-link"
+          >
+            <div className="property-card">
+              <img
+                src={property.image}
+                alt={property.title}
+                className="property-image"
+              />
+              <div className="property-info">
+                <h2 className="property-title">{property.title}</h2>
+               
+                <div className="property-icons">
+                  <span>
+                    <FaBed /> {property.bedrooms} Beds
+                  </span>
+                  <span>
+                    <FaBath /> {property.bathrooms} Baths
+                  </span>
+                  <span>
+                    <FaExpand /> {property.size} Sqft
+                  </span>
                 </div>
+                <h3 className="property-price">$ {property.price}</h3>
+
               </div>
-            </Link>
-          ))}
-        </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
     </div>

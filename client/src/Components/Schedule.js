@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Schedule.css';
 import { Modal, Button } from 'react-bootstrap'; // For the Bootstrap modal
-// import propertyImage6 from '../images/property6.jpg';
+import scheduleImage from '../images/schedule.jpg';
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -19,15 +19,16 @@ const Schedule = () => {
 
   return (
     <div className="animate-on-scroll">
-      
-    <div className="schedule-container">
-   
-      <div className="schedule-row">
-       
-        
 
+    <div className="schedule-container">
+      {/* Header Section */}
+      <div className="schedule-header">
+        <h2>Schedule Your Property Visit</h2>
+        <p>Choose a date and time that works for you, and we'll confirm your appointment!</p>
+      </div>
+
+      <div className="schedule-row">
         <div className="schedule-form">
-          <h1>Schedule a Visit</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="date">Select a Date</label>
@@ -92,12 +93,11 @@ const Schedule = () => {
         </div>
         <div className="schedule-image">
           <img
-           src="https://st.hzcdn.com/simgs/pictures/exteriors/brentwood-corr-contemporary-homes-img~ce615e29036ab030_14-3721-1-5d66026.jpg "
+            src={scheduleImage}
             alt="Property"
             className="property-img"
           />
         </div>
-      </div>
       </div>
 
       {/* Modal */}
@@ -118,6 +118,7 @@ const Schedule = () => {
           </div>
         </Modal.Body>
       </Modal>
+    </div>
     </div>
   );
 };
