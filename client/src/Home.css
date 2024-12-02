@@ -73,17 +73,18 @@ body {
   color: white;
   border-radius: 32px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: none;
   transition: background-color 0.3s ease-in-out;
 }
 
 .visit-button:hover {
-  background-color: #555;
+  background-color: teal;
+  transform: translateY(-2px);
 }
 
 .arrow-icon {
-  font-size: 20px; /* Size of the arrow */
+  font-size: 15px; /* Size of the arrow */
   transition: transform 0.3s ease-in-out;
 }
 
