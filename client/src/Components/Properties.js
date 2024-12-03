@@ -22,7 +22,7 @@ const Properties = () => {
         {properties.map((property) => (
           <Link
             key={property.id}
-            to={`https://real-estate-2-yiyp.onrender.com/property/${property.id}`}
+            to={`/property/${property.id}`}
             className="property-link"
           >
             <div className="property-card">
