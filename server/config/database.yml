@@ -40,4 +40,5 @@ production:
   username: <%= ENV[' khristine_user'] %> # Environment variable for username
   password: <%= ENV[' qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL'] %> # Environment variable for password
   host: <%= ENV[' dpg-ct7duj9u0jms73dpmj60-a'] %> # Environment variable for host (Render's database)
+  secret_key_base: <%= ENV[" d02c2cbe7ff122c443233c7df205a85e29310b6f39d8eefaffd66c5cb3bc2387834014a88bd29f78543e3ac0c581a4d4a8fe0abcfe6f5f92d3ebbb7a30b1f295"] %>
 
