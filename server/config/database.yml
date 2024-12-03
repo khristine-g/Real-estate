@@ -35,8 +35,9 @@ development:
 production:
   adapter: postgresql
   encoding: unicode
-  database: my_app_production
   pool: 5
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  database: <%= ENV[' postgresql://khristine_user:qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL@dpg-ct7duj9u0jms73dpmj60-a.oregon-postgres.render.com/khristine'] %> # Use the DATABASE_URL environment variable
+  username: <%= ENV[' khristine_user'] %> # Environment variable for username
+  password: <%= ENV[' qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL'] %> # Environment variable for password
+  host: <%= ENV[' dpg-ct7duj9u0jms73dpmj60-a'] %> # Environment variable for host (Render's database)
 
