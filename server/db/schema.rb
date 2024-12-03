@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2024_09_17_075740) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "agents", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -23,7 +26,7 @@ ActiveRecord::Schema.define(version: 2024_09_17_075740) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.integer "listing_id", null: false
+    t.bigint "listing_id", null: false
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -44,7 +47,7 @@ ActiveRecord::Schema.define(version: 2024_09_17_075740) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "agent_id", null: false
+    t.bigint "agent_id", null: false
     t.index ["agent_id"], name: "index_listings_on_agent_id"
   end
 

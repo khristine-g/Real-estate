@@ -7,7 +7,7 @@ const PropertyDetail = () => {
   const [property, setProperty] = useState(null);
 
   useEffect(() => {
-    fetch(`/listings/${id}`)
+    fetch(`https://urbanrealty2.onrender.com/listings/${id}`)
       .then(response => response.json())
       .then(data => setProperty(data))
       .catch(error => console.error('Error fetching property:', error));

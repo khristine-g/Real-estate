@@ -7,7 +7,7 @@ const Properties = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    fetch('/listings')
+    fetch('https://urbanrealty2.onrender.com/listings')
       .then((response) => response.json())
       .then((data) => setProperties(data))
       .catch((error) => console.error('Error fetching properties:', error));
@@ -22,7 +22,7 @@ const Properties = () => {
         {properties.map((property) => (
           <Link
             key={property.id}
-            to={`/property/${property.id}`}
+            to={`https://urbanrealty2.onrender.com/property/${property.id}`}
             className="property-link"
           >
             <div className="property-card">
