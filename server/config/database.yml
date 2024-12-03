@@ -1,19 +1,8 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   adapter: postgresql
   encoding: unicode
@@ -21,8 +10,6 @@ test:
   pool: 5
   username: khristine
   password: your_password
-
-
 
 development:
   adapter: postgresql
@@ -36,9 +23,12 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: <%= ENV[' postgresql://khristine_user:qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL@dpg-ct7duj9u0jms73dpmj60-a.oregon-postgres.render.com/khristine'] %> # Use the DATABASE_URL environment variable
-  username: <%= ENV[' khristine_user'] %> # Environment variable for username
-  password: <%= ENV[' qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL'] %> # Environment variable for password
-  host: <%= ENV[' dpg-ct7duj9u0jms73dpmj60-a'] %> # Environment variable for host (Render's database)
-  secret_key_base: <%= ENV[" d02c2cbe7ff122c443233c7df205a85e29310b6f39d8eefaffd66c5cb3bc2387834014a88bd29f78543e3ac0c581a4d4a8fe0abcfe6f5f92d3ebbb7a30b1f295"] %>
+  database: khristine
+  username: khristine_user
+  password: <%= ENV['cXbXXUZQ5N3y1TVaiLz4svn0kWenkLL'] %>
+  host: <%= ENV['dpg-ct7duj9u0jms73dpmj60-a'] %>
+  secret_key_base: <%= ENV['d02c2cbe7ff122c443233c7df205a85e29310b6f39d8eefaffd66c5cb3bc2387834014a88bd29f78543e3ac0c581a4d4a8fe0abcfe6f5f92d3ebbb7a30b1f295'] %>
 
+
+  # database: <%= ENV['postgresql://khristine_user:qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL@dpg-ct7duj9u0jms73dpmj60-a.oregon-postgres.render.com/khristine'] %> # Use the DATABASE_URL environment variable
+  
