@@ -81,8 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: server_production
-  username: server
-  password: <%= ENV['SERVER_DATABASE_PASSWORD'] %>
-  secret_key_base: "f66fb147ddf3c6a1101042777a70c7923011d1b0206d56855c2e0ba803e8ac1f2350968ddfff60f50e4cf12c668a874d8b1777d650848ecaedf14dfd16df10a3"
-
+  DATABASE_HOST: <%= ENV['dpg-ct7duj9u0jms73dpmj60-a'] %>
+  DATABASE_URL: <%= ENV['postgresql://khristine_user:qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL@dpg-ct7duj9u0jms73dpmj60-a.oregon-postgres.render.com/khristine'] %>
+  DATABASE_USER: khristine_user
+  DATABASE_PASSWORD: <%= ENV['qcXbXXUZQ5N3y1TVaiLz4svn0kWenkLL'] %>
+  SECRET_KEY_BASE: <%= ENV['d02c2cbe7ff122c443233c7df205a85e29310b6f39d8eefaffd66c5cb3bc2387834014a88bd29f78543e3ac0c581a4d4a8fe0abcfe6f5f92d3ebbb7a30b1f295'] %> 
