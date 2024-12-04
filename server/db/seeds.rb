@@ -6,42 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-agent1 = Agent.create!(
-  name: 'Erica Tillman',
-  image: ' https://www.essence.com/wp-content/uploads/2019/12/1219-ES-WPO-002.jpg',
-  email: 'erica1@gmail.com',
-  phone: '(123) 456-7890',
-  about: ' Award winner and nominee, Erica Tillman, is one of NYC’s top producing agents. In 2016 she was a Top Producer Individual by sales volume and GCI. This high achiever received, among other recognitions, a Quadruple Platinum Award and was cover of Outfront Magazine in December 2016.
 
-She is known as one of the smartest and most dedicated agents in the City. She has earned an excellent reputation with high-end developers. Her clientele includes some of the wealthiest Family Offices in the world, including royalty, and she works attending each generation’s needs and risk profile. She is the perfect agent for the most demanding clients and runs her business 24/7.'
-)
-agent2 = Agent.create!(
-  name: 'Yara Banks',
-  image: 'https://cdn.shoutoutsocal.com/wp-content/uploads/2023/03/c-PersonalKiyahnaBrown__UCSDgrad8_1676687044209.jpg',
-  email: 'yara3@gmail.com',
-  phone: '(123) 456-7890',
-  about: ' Award winner and nominee, Yara Banks, is one of NYC’s top producing agents. In 2016 she was a Top Producer Individual by sales volume and GCI. This high achiever received, among other recognitions, a Quadruple Platinum Award and was cover of Outfront Magazine in December 2016.
-
-She is known as one of the smartest and most dedicated agents in the City. She has earned an excellent reputation with high-end developers. Her clientele includes some of the wealthiest Family Offices in the world, including royalty, and she works attending each generation’s needs and risk profile. She is the perfect agent for the most demanding clients and runs her business 24/7.'
-)
-agent3 = Agent.create!(
-  name: 'John Linx',
-  image: ' https://i0.wp.com/afro.com/wp-content/uploads/2022/08/IMG-2718-1.jpg?resize=333%2C498&ssl=1',
-  email: 'john9@gmail.com',
-  phone: ' (123) 456-7890',
-  about: 'Award winner and nominee, John Linx, is one of NYC’s top producing agents. In 2016 he was a Top Producer Individual by sales volume and GCI. This high achiever received, among other recognitions, a Quadruple Platinum Award and was cover of Outfront Magazine in December 2016.
-
-He is known as one of the smartest and most dedicated agents in the City. He has earned an excellent reputation with high-end developers. His clientele includes some of the wealthiest Family Offices in the world, including royalty, and he works attending each generation’s needs and risk profile. He is the perfect agent for the most demanding clients and runs his business 24/7. '
-)
-agent4 = Agent.create!(
-  name: 'Mark Luther',
-  image: 'https://static.showit.co/800/nB8VOqP0SOicxyFTSUH63w/109950/5a2a1360_copy.jpg',
-  email: 'mark5@gmail.com',
-  phone: '(123) 456-7890',
-  about: 'Award winner and nominee, Mark Luther, is one of NYC’s top producing agents. In 2016 he was a Top Producer Individual by sales volume and GCI. This high achiever received, among other recognitions, a Quadruple Platinum Award and was cover of Outfront Magazine in December 2016.
-
-He is known as one of the smartest and most dedicated agents in the City. He has earned an excellent reputation with high-end developers. His clientele includes some of the wealthiest Family Offices in the world, including royalty, and he works attending each generation’s needs and risk profile. He is the perfect agent for the most demanding clients and runs his business 24/7. '
-)
+  
 
 
 listing1 = Listing.create!(

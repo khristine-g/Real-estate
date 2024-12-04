@@ -84,3 +84,5 @@ production:
   database: server_production
   username: server
   password: <%= ENV['SERVER_DATABASE_PASSWORD'] %>
+  secret_key_base: "f66fb147ddf3c6a1101042777a70c7923011d1b0206d56855c2e0ba803e8ac1f2350968ddfff60f50e4cf12c668a874d8b1777d650848ecaedf14dfd16df10a3"
+
