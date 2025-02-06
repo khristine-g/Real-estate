@@ -1,6 +1,6 @@
 🏡 URBAN REALTY – Your Gateway to Finding the Perfect Home
 
-About the Project
+ABOUT THE PROJECT
 
 URBAN REALTY is a modern real estate platform designed to help users easily search, browse, and list properties. Whether you're looking to buy, rent, or sell a property, this platform provides an intuitive and seamless experience with advanced filtering, interactive property details, and agent connections.
 
